@@ -1,0 +1,24 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>主页</title>
+
+</head>
+<body>
+  
+  <form action="__URL__/searchRestaurant" method="post">
+  
+  查找餐厅：<input type="text" name="word" />
+  <input type="submit"  value="搜索" />
+  <br />
+  <form/>
+  
+  <a href="__URL__/getRestaurant/rid/{$rid[1]}/rname/{$rname[1]}">{$rname[1]}<a/><br/>
+  <a href="__URL__/getRestaurant/rid/{$rid[2]}/rname/{$rname[2]}">{$rname[2]}<a/><br/>
+  <a href="__URL__/getRestaurant/rid/{$rid[3]}/rname/{$rname[3]}">{$rname[3]}<a/><br/>
+  <a href="__URL__/getRestaurant/rid/{$rid[4]}/rname/{$rname[4]}">{$rname[4]}<a/><br/>
+  <a href="__URL__/getRestaurant/rid/{$rid[5]}/rname/{$rname[5]}">{$rname[5]}<a/>
+  
+</body>
+</html>

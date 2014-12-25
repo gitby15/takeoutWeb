@@ -1,0 +1,41 @@
+﻿drop database denghuan;
+create database denghuan character set 'utf8';
+use denghuan;
+create table denghuan_user(id int auto_increment primary key,username varchar(25) unique,password varchar(40));
+insert into denghuan_user(username,password)values("root","1234");
+
+create table denghuan_restaurant(id int auto_increment primary key,rname varchar(30),rid int);
+insert into denghuan_restaurant(rname,rid)values("最不好吃的四川菜馆",1);
+insert into denghuan_restaurant(rname,rid)values("上海菜馆",2);
+insert into denghuan_restaurant(rname,rid)values("最好吃的广东菜馆",3);
+insert into denghuan_restaurant(rname,rid)values("东北菜馆",4);
+insert into denghuan_restaurant(rname,rid)values("新疆菜馆",5);
+
+create table denghuan_dish(id int auto_increment primary key,dname varchar(30),oprice int ,nprice int ,rid int,did int);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("老成都三锅鱼",8,8,1,11);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("麻婆豆腐",8,8,1,12);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("毛血旺",8,8,1,13);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("夫妻肺片",8,8,1,14);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("回锅肉",8,8,1,15);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("红烧肉",10,10,2,21);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("生煎",10,10,2,22);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("菜泡饭",10,10,2,23);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("红烧排骨",10,10,2,24);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("鲜肉月饼",10,10,2,25);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("白切鸡",1000,99,3,31);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("老火煨汤",1000,99,3,32);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("蜜汁叉烧",1000,99,3,33);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("老李烧鹅",1000,99,3,34);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("肠粉",1000,99,3,35);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("锅包肉",10,10,4,41);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("酱骨架",10,10,4,42);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("小鸡炖蘑菇",10,10,4,43);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("笨鸡蛋",10,10,4,44);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("京酱肉丝",10,10,4,45);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("大盘鸡",10,10,5,51);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("手抓饭",10,10,5,52);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("烤全羊",10,10,5,53);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("羊肉串",10,10,5,54);
+insert into denghuan_dish(dname,oprice,nprice,rid,did)values("葡萄干",10,10,5,55);
+
+create table denghuan_order(id int auto_increment primary key,dishid int,username varchar(25),phone varchar(25),address varchar(100),status int default 100);

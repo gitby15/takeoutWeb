@@ -1,0 +1,38 @@
+<?php if (!defined('THINK_PATH')) exit();?>﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/th/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>订单确认</title>
+</head>
+<body>
+<h2>订单信息确认</h2>
+ <br/><br/><br/>
+ 
+ <table>
+
+	<tr>
+		<th height="50" width="150">菜名</th>
+		<th height="50" width="150">价格</th>
+		
+	</tr>
+	
+	<tr>
+		<th height="50" width="150"><?php echo ($dname); ?></a></th>
+		<th height="50" width="150"><?php echo ($nprice); ?></th>
+	</tr>
+	
+	
+	
+
+</table>
+<br/><br/><br/>
+  <form action="/index.php/Home/User/finishOrder" method="post">
+  地址：<input type="text" name="address"/><br/>
+  电话：<input type="text" name="phone"/>
+		<input type="hidden" name="did" value=<?php echo ($did); ?> >
+  <br/><br/>
+  <br/><br/>
+  <input type="submit"  value="确认下单"/>
+  </form>
+</body>
+</html>
